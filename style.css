@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background: rgb(207, 227, 248);
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: "Inter", sans-serif; 
+    color: white; 
+    font-size: 36px;  
+}
+
+#newContact{
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+    height: 500px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+#headerContact{
+    background: rgb(85, 114, 241);
+    border-radius: 25px 25px 0 0;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    padding-left: 25px;
+    gap: 65px;
+}
+
+#headerContact button{
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: white; 
+    align-self: center;
+    cursor: pointer;
+}
+
+#inputs{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 20px;
+    color:  rgba(131, 131, 131, 0.5);;
+}
+
+#inputs input{
+    height: 60px;
+    border: 2px solid rgba(131, 131, 131, 0.5);
+    border-radius: 8px;
+    padding-left: 15px;
+    font-size: medium;
+    font-weight: 600;    
+}
+
+#inputs input::placeholder{
+    color: rgba(131, 131, 131, 0.7);
+}
+
+#save{
+    background: rgb(85, 114, 241);
+    height: 60px;
+    width: 80%;
+    border: none;
+    border-radius: 8px;
+    align-self: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+#save:hover{
+    background: rgb(73, 97, 206);
+}
+
+/*    border: 2px solid red;       */
