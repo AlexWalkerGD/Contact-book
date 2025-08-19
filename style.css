@@ -15,6 +15,98 @@ body{
     font-size: 36px;  
 }
 
+#book{
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+    height: 650px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+#headerBook{
+    background: rgb(85, 114, 241);
+    border-radius: 25px 25px 0 0;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 22px;
+}
+
+#headerBook div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 90px;
+    padding-left: 25px;
+}
+
+#headerBook input{
+    width: 85%;
+    height: 30%;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+#headerBook button{
+    height: 56px;
+    width: 56px;
+    font-size: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(3, 20, 56, 0.6);
+    border: none;
+    border-radius: 12px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  width: 98%;
+  color: black;
+  background: rgba(134, 134, 134, 0.2);
+  border-radius: 20px;
+  gap: 12px;
+  
+}
+
+ul li img{
+    width: 24%;
+    height: 24%;
+}
+
+ul li div{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ul li p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
 #newContact{
     background: rgb(255, 255, 255);
     border-radius: 25px;
@@ -22,6 +114,7 @@ body{
     width: 350px;
     display: flex;
     flex-direction: column;
+    display: none;
 }
 
 #headerContact{
@@ -58,7 +151,7 @@ body{
 
 #inputs input{
     height: 60px;
-    border: 2px solid rgba(131, 131, 131, 0.5);
+    border: 2px solid rgba(131, 131, 131, 0.3);
     border-radius: 8px;
     padding-left: 15px;
     font-size: medium;
@@ -87,3 +180,4 @@ body{
 }
 
 /*    border: 2px solid red;       */
+
