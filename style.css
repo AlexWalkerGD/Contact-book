@@ -66,6 +66,12 @@ body{
     background: rgba(3, 20, 56, 0.6);
     border: none;
     border-radius: 12px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+#headerBook button:hover{
+    background: rgba(1, 7, 20, 0.6);
 }
 
 ul {
