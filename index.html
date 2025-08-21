@@ -20,14 +20,14 @@
     <div id="newContact">
         <div id="headerContact">
             <div id="title">New Contact</div>
-            <button id="close">x</button>
+            <button onclick="exit()" id="close">x</button>
         </div>
         <div id="inputs">
-            <input type="Name" placeholder="Name">
-            <input type="Phone" placeholder="Phone">
-            <input type="Email" placeholder="Email">
+            <input type="Name" id="name" placeholder="Name">
+            <input type="number" id="phone" pattern="\d{10,}" inputmode="numeric" placeholder="Phone" required>
+            <input type="Email" id="email" placeholder="Email">
         </div>
-        <button id="save">Save</button>
+        <button onclick="saveContact()" id="save">Save</button>
     </div>
 
     <div id="book">
@@ -37,37 +37,16 @@
                 <button onclick="addContact()" id="add">+</button>
             </div>
 
-            <input type="search" placeholder="Search">
+            <input type="search" placeholder="Search" id="search">
         </div>
         <div id="content">
             <ul id="list">
-                <li>
-                    <img src="assets/Avatar.png" alt="">
-                    <div>
-                        <a>Alex Silva</a>
-                        <p>(+351) 965 586 377</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="assets/Avatar.png" alt="">
-                    <div>
-                        <a>Jorge Lima</a>
-                        <p>(+351) 965 586 377</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="assets/Avatar.png" alt="">
-                    <div>
-                        <a>Aline Gomes</a>
-                        <p>(+351) 965 586 377</p>
-                    </div>
-                </li>
-                
+                              
             </ul>
         </div>
     </div>
     
-    <script src="s"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
