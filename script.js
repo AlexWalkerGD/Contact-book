@@ -15,49 +15,57 @@ function saveContact(){
     let phone = document.getElementById("phone").value.trim();
     let email = document.getElementById("email").value.trim();   
 
-    let lista = document.getElementById("list");
-    let newContact = document.createElement("li");
-    newContact.id = "li";
-    let icon = document.createElement("img");
-    icon.src = "assets/Avatar.png";
-    let div = document.createElement("div");
-    div.className = "data";
-    let title = document.createElement("div");
-    title.textContent = name;
-    title.id = "Iname";
-    let number = document.createElement("div");
-    number.textContent = phone;
-    number.id = "Iphone";
+    if(name !== "" && phone !== "" && email !== "" ){
 
-    div.appendChild(title);
-    div.appendChild(number);
-    newContact.appendChild(icon);
-    newContact.appendChild(div);
-    lista.appendChild(newContact);
+      let lista = document.getElementById("list");
+      let newContact = document.createElement("li");
+      newContact.id = "li";
+      let icon = document.createElement("img");
+      icon.src = "assets/Avatar.png";
+      let div = document.createElement("div");
+      div.className = "data";
+      let title = document.createElement("div");
+      title.textContent = name;
+      title.id = "Iname";
+      title.classList.add("nome");
+      let number = document.createElement("div");
+      number.textContent = phone;
+      number.id = "Iphone";
 
-    let itens = Array.from(lista.querySelectorAll("li"));
+      div.appendChild(title);
+      div.appendChild(number);
+      newContact.appendChild(icon);
+      newContact.appendChild(div);
+      lista.appendChild(newContact);
 
-    itens.sort((a, b) => a.textContent.localeCompare(b.textContent, "pt-BR"));
+      let itens = Array.from(lista.querySelectorAll("li"));
 
-    lista.innerHTML = "";
-    itens.forEach(item => lista.appendChild(item));
+      itens.sort((a, b) => a.textContent.localeCompare(b.textContent, "pt-BR"));
 
-    contactWindow.style.display = "none";
+      lista.innerHTML = "";
+      itens.forEach(item => lista.appendChild(item));
+
+      contactWindow.style.display = "none";      
+    }
+    
+    else{
+      let warning = document.getElementById("warningText");
+
+      warning.style.display = "block";
+    }
 }
 
 const input = document.getElementById("search");
-const lista = document.getElementById("list");
-const itens = lista.getElementById("li");
+const list = document.getElementById("list");
 
-input.addEventListener('input', function() {
-      const filtro = input.value.toLowerCase();
+input.addEventListener("input", () => {
+  const filtro = input.value.toLowerCase();
 
-      for (let i = 0; i < itens.length; i++) {
-        const texto = itens[i].textContent.toLowerCase();
-        if (texto.includes(filtro)) {
-          itens[i].classList.remove('hidden');
-        } else {
-          itens[i].classList.add('hidden');
-        }
-      }
-    });
+  const itens = list.querySelectorAll("li");
+
+  itens.forEach(item => {
+    const textDiv = item.querySelector(".nome"); 
+    const text = textDiv ? textDiv.textContent.toLowerCase() : "";
+    item.style.display = text.includes(filtro) ? "" : "none";
+  });
+});

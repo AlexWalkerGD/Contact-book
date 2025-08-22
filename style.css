@@ -36,7 +36,7 @@ body{
     gap: 22px;
 }
 
-#headerBook div{
+#contactdiv{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -45,13 +45,27 @@ body{
     padding-left: 25px;
 }
 
-#headerBook input{
+#searchinput{
     width: 85%;
-    height: 30%;
-    border: none;
+    height: 50px;
+    background: rgb(255, 255, 255);
     border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#searchinput input{
+    border: none;
+    outline: none;  
     font-size: 18px;
-    padding-left: 15px;
+    padding-left: 7px;
+}
+
+#icon2{
+    color: rgba(0, 0, 0, 0.39);
+    width: 25px;
+    padding-left: 12px;
 }
 
 #headerBook button{
@@ -98,8 +112,8 @@ ul li {
 }
 
 ul li img{
-    width: 24%;
-    height: 24%;
+    width: 20%;
+    height: 20%;
 }
 
 .data{
@@ -109,12 +123,12 @@ ul li img{
 }
 
 #Iname{
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 500;
 }
 
 #Iphone{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -149,30 +163,59 @@ ul li img{
     color: white; 
     align-self: center;
     cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #inputs{
     width: 80%;
-    height: 60%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: center;
-    gap: 20px;
-    color:  rgba(131, 131, 131, 0.5);;
+    justify-content: end;
+    gap: 17px;
+    color:  rgba(131, 131, 131, 0.5);
+    padding-bottom: 20px;
+    margin-top: 5px;
 }
 
-#inputs input{
-    height: 60px;
+#inputs div{
     border: 2px solid rgba(131, 131, 131, 0.3);
     border-radius: 8px;
-    padding-left: 15px;
-    font-size: medium;
-    font-weight: 600;    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#icon{
+    width: 30px;
+    padding-left: 12px;
+}
+
+#inputs input{ 
+    display: flex;
+    margin: 6px;
+    margin-left: 12px;
+    height: 45px;
+    font-size: large;
+    border: none;
+    outline: none;  
 }
 
 #inputs input::placeholder{
     color: rgba(131, 131, 131, 0.7);
+}
+
+#warning{
+    height: 20px;
+}
+
+#warningText{
+    color: red;
+    font-size: small;
+    text-align: center;
+    padding-bottom: 10px;
+    display: none;
 }
 
 #save{

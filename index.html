@@ -23,29 +23,50 @@
             <button onclick="exit()" id="close">x</button>
         </div>
         <div id="inputs">
-            <input type="Name" id="name" placeholder="Name">
-            <input type="number" id="phone" pattern="\d{10,}" inputmode="numeric" placeholder="Phone" required>
-            <input type="Email" id="email" placeholder="Email">
+            <div> 
+                <ion-icon name="person" id="icon"></ion-icon>
+                <input type="Name" id="name" placeholder="Name"> 
+            </div>
+            <div> 
+                <ion-icon name="call" id="icon"></ion-icon>
+                <input type="number" id="phone" pattern="\d{10,}" inputmode="numeric" placeholder="Phone" required> 
+            </div>
+            <div> 
+                <ion-icon name="mail" id="icon"></ion-icon>
+                <input type="Email" id="email" placeholder="Email"> 
+            </div>            
         </div>
+        <div id="warning"> <p id="warningText">* Fill in all the fields *</p> </div>
         <button onclick="saveContact()" id="save">Save</button>
     </div>
 
     <div id="book">
         <div id="headerBook">
-            <div>
+            <div id="contactdiv">
                 <p>Contacts</p>
                 <button onclick="addContact()" id="add">+</button>
             </div>
-
-            <input type="search" placeholder="Search" id="search">
+            <div id="searchinput">
+                <ion-icon name="search" id="icon2"></ion-icon>
+                <input type="text" id="search" placeholder="Search" >
+            </div>            
         </div>
         <div id="content">
-            <ul id="list">
-                              
+            <ul id="list">   
+                 
             </ul>
         </div>
     </div>
     
+     <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <script src="script.js"></script>
 
 </body>
