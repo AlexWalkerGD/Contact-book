@@ -1,4 +1,5 @@
 let contactWindow = document.getElementById("newContact")
+let warning = document.getElementById("warningText");
 
 function addContact(){  
     document.getElementById("name").value = "";
@@ -8,7 +9,10 @@ function addContact(){
     contactWindow.style.display = "flex";
 }
 
-function exit(){  contactWindow.style.display = "none"; }
+function exit(){  
+    warning.style.display = "none";
+    contactWindow.style.display = "none";
+}
 
 function saveContact(){
     let name = document.getElementById("name").value.trim();
@@ -49,8 +53,6 @@ function saveContact(){
     }
     
     else{
-      let warning = document.getElementById("warningText");
-
       warning.style.display = "block";
     }
 }
